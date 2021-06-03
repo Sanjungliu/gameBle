@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <%- include('../partials/navbar') %>
+
+    <form action="" method="POST">
+
+        Username <br>
+        <input type="text" name="username"> <br>
+        Email <br>
+        <input type="text" name="email"> <br>
+        Password <br>
+        <input type="password" name="password"> <br>
+
+        Favourite Genre
+        <select name="favourite_genre">
+            <option value="">--- SELECT ---</option>
+            <option value="fighting">Fighting</option>
+            <option value="racing">Racing</option>
+            <option value="RPG">RPG</option>
+            <option value="FPS">FPS</option>
+        </select><br>
+
+        Gender
+
+        Male
+        <input type="radio" value="male" name="gender">
+        Female
+        <input type="radio" value="female" name="gender"><br><br>
+
+        <button>Register</button>
+    </form>
+
+    <% if(errors) { %>
+      <%  let info = errors.split(',') %>
+       <% info.forEach( pesan => { %>
+            <div><%= pesan %></div>
+      <%  }) %>
+   <% } %>
+</body>
+</html>

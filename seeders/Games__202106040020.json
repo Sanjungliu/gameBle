@@ -1,0 +1,56 @@
+ [
+	{
+		"id" : 1,
+		"title" : "Among Us",
+		"developer" : "InnerSloth",
+		"released_year" : 2018,
+		"genre" : "survival",
+		"createdAt" : "2021-02-06T05:12:12.000Z",
+		"updatedAt" : "2021-02-06T05:12:12.000Z"
+	},
+	{
+		"id" : 2,
+		"title" : "Resident Evil 7",
+		"developer" : "Capcom",
+		"released_year" : 2017,
+		"genre" : "horror",
+		"createdAt" : "2021-02-06T05:12:12.000Z",
+		"updatedAt" : "2021-02-06T05:12:12.000Z"
+	},
+	{
+		"id" : 3,
+		"title" : "Grand Theft Auto V",
+		"developer" : "Rockstar",
+		"released_year" : 2013,
+		"genre" : "rpg",
+		"createdAt" : "2021-06-03T09:06:17.000Z",
+		"updatedAt" : "2021-06-03T09:06:17.000Z"
+	},
+	{
+		"id" : 4,
+		"title" : "Fortnite",
+		"developer" : "Epic Games",
+		"released_year" : 2017,
+		"genre" : "fps",
+		"createdAt" : "2021-06-03T09:06:17.000Z",
+		"updatedAt" : "2021-06-03T09:06:17.000Z"
+	},
+	{
+		"id" : 5,
+		"title" : "NBA 2K21",
+		"developer" : "2K Games",
+		"released_year" : 2020,
+		"genre" : "sport",
+		"createdAt" : "2021-06-03T09:06:17.000Z",
+		"updatedAt" : "2021-06-03T09:06:17.000Z"
+	},
+	{
+		"id" : 6,
+		"title" : "Genshin Impact",
+		"developer" : "miHoYo",
+		"released_year" : 2020,
+		"genre" : "adventure",
+		"createdAt" : "2021-06-03T09:06:17.000Z",
+		"updatedAt" : "2021-06-03T09:06:17.000Z"
+	}
+]

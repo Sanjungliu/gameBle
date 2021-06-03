@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('../partials/navbar2', {PlayerId}) %>
+
+    <h2>
+        Game List <%= data.username %> 
+    </h2>
+
+    <table border="1">
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Play Duration</th>
+            <th <%= (PlayerId !== data.id) ? "hidden" : "" %>>Track Play</th>
+            <th <%= (PlayerId !== data.id) ? "hidden" : "" %>>Option</th>
+        </tr>
+        <% data.Games.forEach(el => { %>
+        <tr>
+            <td><%= el.id %> </td>
+            <td><%= el.title %></td>
+            <td><%= el.PlayGame.getHours() %> </td>
+            <td <%= (PlayerId !== data.id) ? "hidden" : "" %>>
+                <a href="/players/<%= data.id %>/play/<%= el.id %>" <%= (el.PlayGame.isPlaying) ? "hidden" : "" %> >Play</a>
+                <a href="/players/<%= data.id %>/stop/<%= el.id %>" <%= (el.PlayGame.isPlaying) ?   "" : "hidden" %> >Stop</a>
+            </td>
+            <td <%= (PlayerId !== data.id) ? "hidden" : "" %>>
+                <a href="/players/<%= data.id %>/delete/<%= el.id %>">Delete</a>
+            </td>
+        </tr>
+        <% }) %>
+
+    </table>
+</body>
+</html>

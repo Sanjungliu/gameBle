@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('../partials/navbar2', {PlayerId}) %>
+
+    <h2>
+        Game List
+    </h2>
+
+    <table border="1">
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Developers</th>
+            <th>Released Year</th>
+            <th>Genre</th>
+            <th>Option</th>
+        </tr>
+        <% data.forEach(el => { %>
+        <tr>
+            <td><%= el.id %> </td>
+            <td><%= el.title %></td>
+            <td><%= el.developer %></td>
+            <td><%= el.released_year %> </td>
+            <td><%= el.genre %> </td>
+            <td>
+                <a href="/games/<%= el.id %>/addGame/<%= PlayerId %>">Add Game</a> ||
+                <a href="/games/<%= el.id %>">Leaderboard</a>
+            </td>
+        </tr>
+        <% }) %>
+
+    </table>
+</body>
+</html>
